@@ -1,44 +1,55 @@
-
+# Intégration bouton connexion
 body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
 
-.background-image {
+.image-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('https://raw.githubusercontent.com/bercyfolies/dossier/main/stethoscope.png');
-    background-image: url('https://raw.githubusercontent.com/bercyfolies/dossier/main/stethoscope.png');
-    background-size: cover;
-    background-position: center;
+    background-color: #f0f0f0;
     z-index: -1;
+}
   
-}
-
 .image-container img {
-    max-width: 100%;
-    max-height: 100%;
-    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.blue-zone {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background-color: rgba(0, 0, 255, 0.5);
+    z-index: 0;
 }
 
-.content {
-    position: relative;
-    text-align: center;
+.button-container {
+    position: absolute;
+    bottom: 25%;
+    right: 25%;
+    z-index: 1;
+}
+
+.connexion-button {
+    background-color: #007bff;
     color: white;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    margin: 100px auto;
-    max-width: 800px;
-    border-radius: 10px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: none;
 }
 
-h1 {
-    font-size: 3em;
+.connexion-button:hover {
+    background-color: #0056b3;
 }
 
-p {
-    font-size: 1.5em;
-}
+
