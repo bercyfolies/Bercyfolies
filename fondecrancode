@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>  
+      <meta charset="UTF-8">   
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+        <title>Bienvenue sur Bercy Folie's
+
+        </title>    
+        <style>        body {
+                font-family: Arial, sans-serif;
+                 margin: 0;
+                 padding: 0;
+                 background-color: white; 
+                 display: flex;
+                justify-content: center;  
+                align-items: center; 
+                 height: 100vh;    
+        }
+         .fullscreen-image {
+              max-width: 90%;
+              max-height: 90%;
+             object-fit: contain;
+             transform: scaleX(1.1);
+        }
+        </style>
+        </head>
+        <body>
+            <img src="https://mistralaichatupprodswe.blob.core.windows.net/chat-images/bf/58/b2/bf58b237-2f38-4ab5-a1dc-2bd111d44dfe/89225a2d-9784-4391-b013-e06c40eea976/dc52eb94-4f70-4c07-bd43-4cf7756df582?sv=2025-01-05&st=2025-09-20T23%3A50%3A17Z&se=2025-09-21T00%3A50%3A17Z&sr=b&sp=rade&sig=9n%2BNC3EtVVXimiYllQ%2FJpByGqTDQet67aRkDOgpDLic%3D" alt="Clinique de Bercy" class="fullscreen-image">
+       </body>
+       </html>
