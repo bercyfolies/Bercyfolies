@@ -1,10 +1,121 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bercy Folies</title>
+    <title>Clinique de Bercy - Charenton-le-Pont</title>
     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://raw.githubusercontent.com/bercyfolies/Bercyfolies/c02978982f5d8f8b81a83c18056a86f8f65d5821/bercyfolies_fond_ecran.png" alt="Clinique de Bercy - Charenton-le-Pont">
+    </div>  
+    <div class="button-container">
+        <button class="connexion-button" onclick="openPopup()">CONNEXION</button>
     </div>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div class="popup-header">
+                <h2>Connexion</h2>
+            </div>
+            <div class="popup-body">
+                <form id="login-form">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="submit-button">Se connecter</button>
+                </form>
+                <div class="toggle-form">
+                    <p>Pas encore inscrit ? <a href="#" onclick="toggleForm()">S'inscrire</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="register-popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div class="popup-header">
+                <h2>Inscription</h2>
+            </div>
+            <div class="popup-body">
+                <form id="register-form">
+                    <div class="form-group">
+                        <label for="first-name">Prénom</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Nom</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" name="register-email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Mot de passe</label>
+                        <input type="password" id="register-password" name="register-password" required>
+                    </div>
+                    <button type="submit" class="submit-button">S'inscrire</button>
+                </form>
+                <div class="toggle-form">
+                    <p>Déjà inscrit ? <a href="#" onclick="toggleForm()">Se connecter</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('register-popup').style.display = 'none';
+        }
+
+        function toggleForm() {
+            var loginPopup = document.getElementById('popup');
+            var registerPopup = document.getElementById('register-popup');
+
+            if (loginPopup.style.display === 'block') {
+                loginPopup.style.display = 'none';
+                registerPopup.style.display = 'block';
+            } else {
+                loginPopup.style.display = 'block';
+                registerPopup.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
