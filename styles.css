@@ -51,6 +51,57 @@ main {
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
+     width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    }
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: black;
+}
+
+.popup-content h2 {
+    color: black;
+}
+
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+.popup-content label {
+    margin-top: 10px;
+    color: black;
+}
+
+.popup-content input {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.popup-content button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
     width: 80%;
     max-width: 400px;
     border-radius: 10px;
@@ -128,8 +179,7 @@ main {
     }
 }
 
-
-ound-color: rgba(0, 0, 0, 0.5);
+olor: rgba(0, 0, 0, 0.5);
     padding: 10px;
     position: fixed;
     bottom: 0;
@@ -183,17 +233,7 @@ footer {
         font-size: 0.9em;
     }
 
-    footer p {
-        font-size: 0.7em;
-    }
-
-    .connection-button {
-        bottom: 5px;
-        right: 5px;
-        padding: 6px 12px;
-        font-size: 12px;
-    }
-}
+  
 
 
 
