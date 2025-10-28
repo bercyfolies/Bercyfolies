@@ -4,23 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   "" <title>Page avec Image de Fond Responsive</title>
+
+    <title>Page avec Image de Fond Responsive</title>
     <link rel="stylesheet" href="styles.css">
+</head>
 </head>
 
 
 
-
-
-
-
-</html>
-
     <main>
-        <button class="connection-button">CONNECTION</button>
+
+        <button class="connection-button" onclick="openPopup()">CONNEXION</button>
     </main>
+
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Connexion</h2>
+            <form>
+                <label for="telephone">TELEPHONE:</label>
+                <input type="text" id="telephone" name="telephone" required>
+                <label for="password">Mot de passe:</label>
+                <input type="password" id="password" name="password" value="123456" required>
+                <button type="submit">Se connecter</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-</html>
+
+
 
 
