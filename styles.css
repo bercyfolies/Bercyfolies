@@ -78,71 +78,41 @@ main {
     display: flex;
     flex-direction: column;
 }
-
-.popup-content label {
-    margin-top: 10px;
-    color: black;
-}
-
-.popup-content input {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.popup-content button {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: blue;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
-    width: 80%;
-    max-width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    position: relative;
-}
-
-.close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover {
-    color: black;
-}
-
-.popup-content h2 {
-    color: black;
-}
-
-.popup-content form {
+.form-group {
     display: flex;
-    flex-direction: column;
+    flex-direction: left;
+  margin-bottom: 15px;
+}
+.popup-content label {
+      margin-right: 10px;
+    color: black;
+    text-align: left;
+    min-width: 100px;
 }
 
-.popup-content label {
-    margin-top: 10px;
-    color: black;
-}
 
 .popup-content input {
     padding: 10px;
-    margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
+   
+    
 }
-
-.popup-content button {
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.popup-content button[type="submit"] {
     margin-top: 20px;
     padding: 10px;
     background-color: blue;
@@ -151,6 +121,18 @@ main {
     border-radius: 5px;
     cursor: pointer;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Media Queries for Responsive Design */
 @media (max-width: 768px) {
@@ -165,7 +147,6 @@ main {
         width: 90%;
     }
 }
-
 @media (max-width: 480px) {
     .connection-button {
         bottom: 5px;
@@ -177,61 +158,19 @@ main {
     .popup-content {
         width: 95%;
     }
+
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .popup-content label {
+        margin-bottom: 5px;
+        margin-right: 0;
+    }
 }
 
-olor: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
 
-footer {
-    background-color: rgba(0, 0, 0, 0.5);
-        padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    }
-
-/* Media Queries for Responsive Design */
-@media (max-width: 768px) {
-    header, main, footer {
-        padding: 5px;
-    }
-
-    header h1 {
-        font-size: 1.2em;
-    }
-
-    main p {
-        font-size: 0.9em;
-    }
-
-    footer p {
-        font-size: 0.8em;
-    }
-
-    .connection-button {
-        bottom: 10px;
-        right: 10px;
-        padding: 8px 16px;
-        font-size: 14px;
-}
-}
-
-@media (max-width: 480px) {
-    header, main, footer {
-        padding: 5px;
-    }
-
-    header h1 {
-        font-size: 1.2em;
-    }
-
-    main p {
-        font-size: 0.9em;
-    }
 
   
 
