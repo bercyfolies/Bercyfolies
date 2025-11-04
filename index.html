@@ -24,7 +24,7 @@
         
             </form>action="login.php" method="POST">
 
- <form>
+            
                 <div class="form-group">
                     <label for="telephone">Téléphone:</label>
                     <input type="text" id="telephone" name="telephone" maxlength="10" size="10" required>
@@ -36,8 +36,10 @@
                         <button type="button" class="toggle-password" onclick="togglePassword()">👁️</button>
                     </div>
                 </div>
-                <button type="submit">Se connecter</button>
+                <button type="submit" onclick="validateLogin()">Se connecter</button>
             </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
