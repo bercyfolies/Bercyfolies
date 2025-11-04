@@ -34,8 +34,14 @@ function validateLogin() {
     })
     .then(data => {
         if (data.valid) {
-            alert('Connexion réussie !');
-            closePopup();
+       if (data.prenom) {
+               // Fermer la première popup
+                closePopup();
+                // Afficher une popup de bienvenue avec le prénom
+                showWelcomePopup(data.prenom);
+            } else {
+                alert('Prénom non trouvé.');
+            }
         } else {
             alert('Numéro de téléphone ou mot de passe incorrect.');
         }
@@ -45,3 +51,26 @@ function validateLogin() {
         alert('Une erreur est survenue lors de la connexion.');
     });
 }
+
+function showWelcomePopup(prenom) {
+    // Créer une nouvelle popup de bienvenue
+    const welcomePopup = document.createElement('div');
+    welcomePopup.className = 'welcome-popup';
+    welcomePopup.innerHTML = `
+        <div class="welcome-popup-content">
+            <span class="close" onclick="closeWelcomePopup()">&times;</span>
+            <h2>Bienvenue ${prenom}</h2>
+            <button onclick="closeWelcomePopup()">OK</button>
+        </div>
+    `;
+
+    // Ajouter la popup de bienvenue au corps du document
+    document.body.appendChild(welcomePopup);
+
+    // Fonction pour fermer la popup de bienvenue
+    window.closeWelcomePopup = function() {
+        document.body.removeChild(welcomePopup);
+                // Ouvrir la page web menu
+        window.location.href = 'menu.html';
+    };
+}  
